@@ -1,12 +1,11 @@
 package main
 
 import (
+"crypto/md5"
 "fmt"
-"os/exec"
 )
 
 func main() {
-command := "echo hello"
-output, _ := exec.Command("sh", "-c", command).Output()
-fmt.Println(string(output))
+h := md5.New()
+fmt.Println(h)
 }
